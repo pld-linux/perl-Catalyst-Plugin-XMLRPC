@@ -6,21 +6,21 @@
 %define	pdir	Catalyst
 %define	pnam	Plugin-XMLRPC
 Summary:	Catalyst::Plugin::XMLRPC - Dispatch XMLRPC methods with Catalyst
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	Catalyst::Plugin::XMLRPC - przekazywanie metod XMLRPC przy użyciu Catalysta
 Name:		perl-Catalyst-Plugin-XMLRPC
 Version:	1.0
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/S/SR/SRI/Catalyst-Plugin-XMLRPC-1.0.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/S/SR/SRI/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	1422792644bb42bf7e1874f116df48ef
 URL:		http://search.cpan.org/dist/Catalyst-Plugin-XMLRPC/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl(Catalyst) >= 5.64
-BuildRequires:	perl(RPC::XML)
+BuildRequires:	perl-Catalyst >= 5.64
+BuildRequires:	perl-RPC-XML
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,8 +29,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This plugin allows your controller class to dispatch XMLRPC methods
 from its own class.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Ta wtyczka pozwala klasie kontrolera przekazywać metody XMLRPC ze
+swojej własnej klasy.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
