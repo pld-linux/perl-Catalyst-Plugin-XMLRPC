@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Catalyst
 %define	pnam	Plugin-XMLRPC
 Summary:	Catalyst::Plugin::XMLRPC - Dispatch XMLRPC methods with Catalyst
